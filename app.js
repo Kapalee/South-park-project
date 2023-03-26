@@ -3,7 +3,7 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const pcPrincipal = await getCharacter("pcPrincipal.json");
+  const pcPrincipal = await getCharacter("data/pcPrincipal.json");
   showCharacter(pcPrincipal);
   console.log(pcPrincipal);
 }
