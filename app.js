@@ -3,9 +3,8 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const pcPrincipal = await getCharacter("data/pcPrincipal.json");
-  showCharacter(pcPrincipal);
-  console.log(pcPrincipal);
+  const character = await getCharacter();
+  character.forEach(showCharacter);
 }
 
 async function getCharacter(url) {
@@ -14,40 +13,38 @@ async function getCharacter(url) {
   return data;
 }
 
-function showCharacter(character) {
-  document.querySelector("#characters").insertAdjacentHTML(
-    "beforeend",
-    /*html*/ `
-            <article class="grid-item">
-                <img src="${character.image}">
-                <h2>${character.name}</h2>
-                <p>${character.nickname}</p>
-                <p>occupation: ${character.occupation}</p>
-                <p>voiced by: ${character.voicedBy}</p>
-                <p>age: ${character.age}</p>
-                <p>gender: ${character.gender}</p>
-                <p>eye color: ${character.eyeColor}</p>
-                <p>hair color: ${character.hairColor}</p>
-                <p>catch phrase: ${character.catchPhrase}</p>
-                <p>first apperance: ${character.firstAppearance}</p>
-                <p>religion: ${character.religion}</p>
-                </article>
-        `
-  );
+function showCharacter(person) {
+  const HTML =
+    /*html*/
+    `
+    <article class="grid-item">
+    <img src="${person.image}"">
+    <h1><span>${person.name}</span></h1>
+    <p><strong>Aka: </strong><span>${person.nickname}</span></spa></p>
+    </article>
+      `;
+  document.querySelector("#characters").insertAdjacentHTML("beforeend");
   document.querySelector("#characters article:last-child").addEventListener("click", characterClicked);
 
   function characterClicked() {
-    document.querySelector("#dialogue-name").textContent = character.name;
-    document.querySelector("#dialogue-nickname").textContent = character.nickname;
-    document.querySelector("#dialogue-occupation").textContent = character.occupation;
-    document.querySelector("#dialogue-voice").textContent = character.voicedBy;
-    document.querySelector("#dialogue-age").textContent = character.age;
-    document.querySelector("#dialogue-gender").textContent = character.gender;
-    document.querySelector("#dialogue-eye").textContent = character.eyeColor;
-    document.querySelector("#dialogue-hair").textContent = character.hairColor;
-    document.querySelector("#dialogue-phrase").textContent = character.catchPhrase;
-    document.querySelector("#dialogue-appearance").textContent = character.firstAppearance;
-    document.querySelector("#dialogue-religion").textContent = character.religion;
+    document.querySelector("#dialogue-name").textContent = person.name;
+    document.querySelector("#dialogue-nickname").textContent = person.nickname;
+    document.querySelector("#dialogue-occupation").textContent = person.occupation;
+    document.querySelector("#dialogue-voice").textContent = person.voicedBy;
+    document.querySelector("#dialogue-age").textContent = person.age;
+    document.querySelector("#dialogue-gender").textContent = person.gender;
+    document.querySelector("#dialogue-eye").textContent = person.eyeColor;
+    document.querySelector("#dialogue-hair").textContent = person.hairColor;
+    document.querySelector("#dialogue-phrase").textContent = person.catchPhrase;
+    document.querySelector("#dialogue-appearance").textContent = person.firstAppearance;
+    document.querySelector("#dialogue-religion").textContent = person.religion;
     document.querySelector("#dialogue").showModal();
   }
 }
+
+function showCharacterModal(list) {
+  showCharacter(person);
+}
+function showDialog(person) {}
+
+function closeDialog() {}

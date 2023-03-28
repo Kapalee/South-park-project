@@ -1,15 +1,16 @@
 {
   "name": "Peter Charles",
   "nickname": "PC Principal",
-  "occupation": "principal",
-  "age": "30",
-  "gender": "male",
-  "eyeColour": "green",
-  "hairColor": "dirty blond",
-  "voicedBy": "Trey Parker",
-  "eyeColor": "black",
-  "catchPhrase": "Watch your micro-aggressions, bro!",
-  "firstAppearance": "S19, E01",
   "image": "IMG/PCprincipal1.webp",
-  "religion": "Christian"
+  "occupation": "principal",
+  "age": 30,
+  "voicedBy": "Trey Parker",
+  "gender": "male",
+  "religion": "Christian",
+  "catchPhrase": "Watch your micro-aggressions, bro!",
+  "hairColor": "dirty blond",
+  "schoolGrade": null,
+  "episodes": "S19E01, S19E02, S19E03, S19E05, S19E06, S19E07, S19E08, S19E09, S19E10, S20E01, S20E05, S20E08, S21E02, S21E08, S21E09, S21E10, S22E01, S22E03, S22E08, S25E01",
+  "appearances": 20,
+  "firstAppearance": "S19, E01"
 }
