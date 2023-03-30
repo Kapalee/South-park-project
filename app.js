@@ -8,7 +8,7 @@ async function initApp() {
 }
 
 async function getCharacter() {
-  const response = await fetch("data/southpark.json");
+  const response = await fetch("https://cederdorff.github.io/dat-js/05-data/southpark.json");
   const data = await response.json();
   return data;
 }
