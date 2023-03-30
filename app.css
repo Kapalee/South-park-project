@@ -1,12 +1,12 @@
 /* ---------- root variables ---------- */
 :root {
-  --green: rgb(38, 76, 89);
-  --light-green: rgb(172, 198, 201);
-  --light-grey: #f1f1f4;
+  --green: rgb(35, 176, 223);
+  --light-green: rgb(19, 214, 236);
+  --light-grey: #7bf02d;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
   --white: #f2f2f2;
-  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /* ---------- general styling ---------- */
@@ -27,21 +27,6 @@ h1 {
   font-weight: 500;
   letter-spacing: 0.1px;
   text-align: center;
-}
-
-h2 {
-  font-weight: 500;
-  letter-spacing: 0.1px;
-}
-
-h3 {
-  font-weight: 500;
-  letter-spacing: 0.1px;
-}
-
-a {
-  cursor: pointer;
-  color: var(--green);
 }
 
 img {
@@ -66,7 +51,6 @@ header {
 
 footer {
   background-color: var(--green);
-  color: var(--text-color-light);
   padding: 1em;
   text-align: center;
 }
